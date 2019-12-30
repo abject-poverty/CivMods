@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
-using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.GameContent;
@@ -22,6 +21,7 @@ namespace CivMods
             api.RegisterBlockClass("BlockSnitch", typeof(BlockSnitch));
             api.RegisterBlockEntityClass("Snitch", typeof(BlockEntitySnitch));
             api.RegisterItemClass("ItemBlueprint", typeof(ItemBlueprint));
+            api.RegisterItemClass("ItemProspectingPick", typeof(ItemPropickExtension));
         }
 
         public bool TryAccessSnitch(BlockEntitySnitch snitch, IServerPlayer player)
@@ -181,143 +181,6 @@ namespace CivMods
             var handling = EnumHandHandling.Handled;
 
             (offhand?.Itemstack?.Item as ItemPlumbAndSquare)?.OnHeldInteractStart(offhand, byPlayer.Entity, blockSel, null, true, ref handling);
-        }
-    }
-
-    class BlockSnitch : Block
-    {
-        public override void OnBlockPlaced(IWorldAccessor world, BlockPos pos, ItemStack byItemStack = null)
-        {
-            if (world.GetBlockEntitiesAround(pos, new Vec2i(11, 11)).Any(e => (e is BlockEntitySnitch)))
-            {
-                world.RegisterCallback(dt => world.BlockAccessor.BreakBlock(pos, null), 500);
-            }
-            base.OnBlockPlaced(world, pos, byItemStack);
-        }
-
-        public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
-        {
-            BlockEntitySnitch be = (blockSel?.Position?.BlockEntity(world) as BlockEntitySnitch);
-            if (be != null && (be.OwnerUID == null || be.OwnerUID == "") && world.Side.IsServer())
-            {
-                be.OwnerUID = byPlayer.PlayerUID;
-                ((ICoreServerAPI)world.Api).SendMessage(byPlayer, 0, "You now own this snitch.", EnumChatType.OwnMessage);
-                be.MarkDirty();
-            }
-            else (world.Api as ICoreClientAPI)?.SendChatMessage("/snitchinfo");
-            return true;
-        }
-    }
-
-    class BlockEntitySnitch : BlockEntity
-    {
-        public List<string> Breakins = new List<string>();
-        public bool cooldown = true;
-        public int limit = 512;
-
-        public string OwnerUID { get; set; }
-
-        public override void Initialize(ICoreAPI api)
-        {
-            base.Initialize(api);
-
-            if (api.Side.IsServer())
-            {
-                RegisterGameTickListener(dt =>
-                {
-                    SimpleParticleProperties props = Pos.DownCopy().TemporalEffectAtPos(api);
-                    props.MinPos.Add(0, 0.5, 0);
-                    api.World.SpawnParticles(props);
-                    List<IPlayer> intruders = new List<IPlayer>();
-
-                    if (cooldown && api.World.GetPlayersAround(Pos.ToVec3d(), 13, 13).Any(e => {
-                        if (e.PlayerUID == OwnerUID || OwnerUID == null || OwnerUID == "") return false;
-
-                        intruders.Add(e);
-                        return true;
-                    }))
-                    {
-                        LimitCheck();
-                        cooldown = false;
-                        foreach (var val in intruders)
-                        {
-                            Breakins.Add(val.PlayerName + " is inside the radius of " + Pos.RelativeToSpawn(api.World).ToVec3i() + " at " + val.Entity.LocalPos.XYZInt.ToBlockPos().RelativeToSpawn(api.World));
-                            MarkDirty();
-                        }
-                        RegisterDelayedCallback(dt2 => cooldown = true, 5000);
-                    }
-                }, 30);
-            }
-        }
-
-        public void NotifyOfBreak(IServerPlayer byPlayer, int oldblockId, BlockPos pos)
-        {
-            if (byPlayer.PlayerUID == OwnerUID) return;
-            LimitCheck();
-            Breakins.Add(byPlayer.PlayerName + " broke or tried to break a block at " + pos.RelativeToSpawn(byPlayer.Entity.World) + " with the name of " + Api.World.GetBlock(oldblockId).Code);
-            MarkDirty();
-        }
-
-        public void LimitCheck()
-        {
-            if (Breakins.Count >= limit) Breakins.RemoveAt(0);
-        }
-
-        public override void FromTreeAtributes(ITreeAttribute tree, IWorldAccessor worldAccessForResolve)
-        {
-            OwnerUID = tree.GetString("owner");
-            for (int i = 0; i < limit; i++)
-            {
-                string str = tree.GetString("breakins" + i);
-                if (str != null) Breakins.Add(str);
-            }
-            base.FromTreeAtributes(tree, worldAccessForResolve);
-        }
-
-        public override void ToTreeAttributes(ITreeAttribute tree)
-        {
-            tree.SetString("owner", OwnerUID);
-            for (int i = 0; i < limit; i++)
-            {
-                if (i >= Breakins.Count) continue;
-
-                tree.SetString("breakins" + i, Breakins[i]);
-            }
-            base.ToTreeAttributes(tree);
-        }
-    }
-
-    class ItemBlueprint : Item
-    {
-        public override void OnHeldRenderOrtho(ItemSlot inSlot, IClientPlayer byPlayer)
-        {
-            base.OnHeldRenderOrtho(inSlot, byPlayer);
-        }
-
-        public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
-        {
-            if (blockSel?.BlockEntity(api) is BlockEntityChisel)
-            {
-                handling = EnumHandHandling.PreventDefault;
-                BlockEntityChisel entityChisel = ((BlockEntityChisel)blockSel.BlockEntity(api));
-                ITreeAttribute blueprintTree = slot?.Itemstack?.Attributes;
-                ITreeAttribute dummy = blueprintTree.Clone();
-                entityChisel.ToTreeAttributes(dummy);
-                blueprintTree["materials"] = dummy["materials"];
-
-                if (byEntity.Controls.Sneak)
-                {
-                    blueprintTree["cuboids"] = new IntArrayAttribute();
-                    entityChisel.ToTreeAttributes(blueprintTree);
-                    slot.MarkDirty();
-                }
-                else if (blueprintTree["cuboids"] != null)
-                {
-                    entityChisel.FromTreeAtributes(blueprintTree, api.World);
-                }
-                if (api.Side.IsClient()) entityChisel.RegenMesh();
-            }
-            base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, firstEvent, ref handling);
         }
     }
 }

@@ -13,7 +13,7 @@ using Vintagestory.GameContent;
 
 namespace CivMods
 {
-    public static class ArrayStuff
+    public static class Extensions
     {
         public static T NextR<T>(this T[] array, ref uint index)
         {
