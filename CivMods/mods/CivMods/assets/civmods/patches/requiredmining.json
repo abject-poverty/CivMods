@@ -1,0 +1,979 @@
+[
+    {
+        "op": "add",
+        "path": "/behaviorsByType",
+        "value": {
+            "*": [
+                {
+                    "name": "UnbreakableByTier",
+                    "properties": {
+                        "MiningTier": 1
+                    }
+                }
+            ]
+        },
+        "file": "game:blocktypes/wood/planks.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviorsByType",
+        "value": {
+            "*": [
+                {
+                    "name": "UnbreakableByTier",
+                    "properties": {
+                        "MiningTier": 1
+                    }
+                }
+            ]
+        },
+        "file": "game:blocktypes/wood/fence.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/fencegate.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/henbox.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviorsByType/*/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/log.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviorsByType/*/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/log-withresin.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviorsByType",
+        "value": {
+            "*": [
+                {
+                    "name": "UnbreakableByTier",
+                    "properties": {
+                        "MiningTier": 1
+                    }
+                }
+            ]
+        },
+        "file": "game:blocktypes/wood/plankpile.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/plankslab.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviorsByType",
+        "value": {
+            "*": [
+                {
+                    "name": "UnbreakableByTier",
+                    "properties": {
+                        "MiningTier": 1
+                    }
+                }
+            ]
+        },
+        "file": "game:blocktypes/wood/plankstairs.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/stackedbamboo.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/generic/agedwallpaperplanks.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/generic/barrel.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 1
+                }
+            }
+        ],
+        "file": "game:blocktypes/wood/generic/bed.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/generic/bookshelves.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/generic/bucket.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/generic/cage.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 1
+                }
+            }
+        ],
+        "file": "game:blocktypes/wood/generic/chair.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/generic/chest.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/generic/chest-labeled.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 1
+                }
+            }
+        ],
+        "file": "game:blocktypes/wood/generic/crate.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/generic/door.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/generic/echochamber.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 1
+                }
+            }
+        ],
+        "file": "game:blocktypes/wood/generic/firewoodpile.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 1
+                }
+            }
+        ],
+        "file": "game:blocktypes/wood/generic/omoktabletop.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/generic/painting.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/generic/pan.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 1
+                }
+            }
+        ],
+        "file": "game:blocktypes/wood/generic/rails.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/generic/shelf.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 1
+                }
+            }
+        ],
+        "file": "game:blocktypes/wood/generic/sign.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 1
+                }
+            }
+        ],
+        "file": "game:blocktypes/wood/generic/signpost.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 1
+                }
+            }
+        ],
+        "file": "game:blocktypes/wood/generic/table.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/generic/toolrack.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/generic/trapdoor.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 1
+                }
+            }
+        ],
+        "file": "game:blocktypes/wood/generic/trough-large.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/generic/trough-small.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 2
+            }
+        },
+        "file": "game:blocktypes/stone/crystal.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 0
+            }
+        },
+        "file": "game:blocktypes/stone/gravel.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 0
+            }
+        },
+        "file": "game:blocktypes/stone/gravel-layered.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 4
+            }
+        },
+        "file": "game:blocktypes/stone/meteorite.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 2
+            }
+        },
+        "file": "game:blocktypes/stone/crystal.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 2
+            }
+        },
+        "file": "game:blocktypes/stone/ore-gem.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 2
+            }
+        },
+        "file": "game:blocktypes/stone/ore-graded.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 2
+            }
+        },
+        "file": "game:blocktypes/stone/ore-ungraded.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 2
+            }
+        },
+        "file": "game:blocktypes/stone/plaster-fancy.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 2
+                }
+            }
+        ],
+        "file": "game:blocktypes/stone/plaster-plain.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 2
+                }
+            }
+        ],
+        "file": "game:blocktypes/stone/polishedrock.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 2
+            }
+        },
+        "file": "game:blocktypes/stone/polishedrockslab.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 2
+            }
+        },
+        "file": "game:blocktypes/stone/quern.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 2
+            }
+        },
+        "file": "game:blocktypes/stone/rock.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 0
+            }
+        },
+        "file": "game:blocktypes/stone/sand.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 0
+            }
+        },
+        "file": "game:blocktypes/stone/sand-layered.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 2
+                }
+            }
+        ],
+        "file": "game:blocktypes/stone/stalagsection.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 2
+                }
+            }
+        ],
+        "file": "game:blocktypes/stone/cobble/cobbleskull.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 2
+            }
+        },
+        "file": "game:blocktypes/stone/cobble/cobbleslab.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 2
+                }
+            }
+        ],
+        "file": "game:blocktypes/stone/cobble/cobblestone.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 2
+                }
+            }
+        ],
+        "file": "game:blocktypes/stone/cobble/cobblestonestairs.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 2
+            }
+        },
+        "file": "game:blocktypes/stone/generic/altar.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 2
+                }
+            }
+        ],
+        "file": "game:blocktypes/stone/generic/forge.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 2
+                }
+            }
+        ],
+        "file": "game:blocktypes/stone/generic/stonepath.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 2
+                }
+            }
+        ],
+        "file": "game:blocktypes/stone/generic/stonepathslab.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 2
+                }
+            }
+        ],
+        "file": "game:blocktypes/stone/generic/stonepathstairs.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 2
+            }
+        },
+        "file": "game:blocktypes/stone/generic/stove.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 2
+                }
+            }
+        ],
+        "file": "game:blocktypes/stone/quartz/full.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 2
+            }
+        },
+        "file": "game:blocktypes/stone/quartz/pillar.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 2
+            }
+        },
+        "file": "game:blocktypes/stone/quartz/slab.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 2
+                }
+            }
+        ],
+        "file": "game:blocktypes/stone/quartz/stairs.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 2
+                }
+            }
+        ],
+        "file": "game:blocktypes/stone/stonebrick/stonebrick.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 2
+            }
+        },
+        "file": "game:blocktypes/stone/stonebrick/stonebrickslab.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 2
+                }
+            }
+        ],
+        "file": "game:blocktypes/stone/stonebrick/stonebrickstairs.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 0
+                }
+            }
+        ],
+        "file": "game:blocktypes/soil/soil.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 0
+                }
+            }
+        ],
+        "file": "game:blocktypes/soil/bony.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 0
+                }
+            }
+        ],
+        "file": "game:blocktypes/soil/clay.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 0
+                }
+            }
+        ],
+        "file": "game:blocktypes/soil/cob.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 0
+                }
+            }
+        ],
+        "file": "game:blocktypes/soil/farmland.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 0
+                }
+            }
+        ],
+        "file": "game:blocktypes/soil/mudbrick.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors/0",
+        "value": {
+            "name": "UnbreakableByTier",
+            "properties": {
+                "MiningTier": 0
+            }
+        },
+        "file": "game:blocktypes/soil/mudbrickslab.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 0
+                }
+            }
+        ],
+        "file": "game:blocktypes/soil/muddygravel.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 0
+                }
+            }
+        ],
+        "file": "game:blocktypes/soil/peat.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 0
+                }
+            }
+        ],
+        "file": "game:blocktypes/soil/peatbrick.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 0
+                }
+            }
+        ],
+        "file": "game:blocktypes/soil/peatpile.json"
+    },
+    {
+        "op": "add",
+        "path": "/behaviors",
+        "value": [
+            {
+                "name": "UnbreakableByTier",
+                "properties": {
+                    "MiningTier": 0
+                }
+            }
+        ],
+        "file": "game:blocktypes/soil/termitemound.json"
+    }
+]

@@ -22,6 +22,7 @@ namespace CivMods
             api.RegisterBlockEntityClass("Snitch", typeof(BlockEntitySnitch));
             api.RegisterItemClass("ItemBlueprint", typeof(ItemBlueprint));
             api.RegisterItemClass("ItemProspectingPick", typeof(ItemPropickExtension));
+            api.RegisterBlockBehaviorClass("UnbreakableByTier", typeof(BlockBehaviorUnbreakableByTier));
         }
 
         public bool TryAccessSnitch(BlockEntitySnitch snitch, IServerPlayer player)

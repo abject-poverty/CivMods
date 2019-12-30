@@ -1,8 +1,0 @@
-[
-    {
-        "op": "add",
-        "path": "/storageFlags",
-        "value": 257,
-        "file": "game:itemtypes/tool/plumbandsquare.json"
-    }
-]
