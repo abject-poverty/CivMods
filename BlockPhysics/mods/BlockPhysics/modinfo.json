@@ -1,8 +1,0 @@
-{
-	"type": "code",
-	"name": "Standalone Block Physics",
-	"modid": "blockphysicsmod",
-	"description" : "",
-	"authors": ["Novocain"],
-	"version": "1.0.19"
-}
