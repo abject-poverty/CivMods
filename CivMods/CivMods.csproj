@@ -102,13 +102,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions.cs" />
-    <Compile Include="BlockEntitySnitch.cs" />
-    <Compile Include="BlockSnitch.cs" />
-    <Compile Include="CivModSystem.cs" />
-    <Compile Include="ItemBlueprint.cs" />
-    <Compile Include="ItemPropickExtension.cs" />
+    <Compile Include="Source\Utility\Extensions.cs" />
+    <Compile Include="Source\BlockEntities\BlockEntitySnitch.cs" />
+    <Compile Include="Source\Blocks\BlockSnitch.cs" />
+    <Compile Include="Source\CivModSystem.cs" />
+    <Compile Include="Source\Items\ItemBlueprint.cs" />
+    <Compile Include="Source\Items\ItemPropickExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
