@@ -55,7 +55,7 @@ namespace CivMods
                 }
             });
             if (Ores.Count() == 0) return "Found nothing of interest.";
-
+            
             int most = Ores.GroupBy(i => i).OrderByDescending(grp => grp.Count()).Select(grp => grp.Key).First();
 
             Ores.Any(o =>

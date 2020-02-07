@@ -20,7 +20,7 @@ namespace CivMods
 
         public override void OnBlockBroken(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, ref EnumHandling handling)
         {
-            if ((byPlayer?.InventoryManager?.ActiveHotbarSlot?.Itemstack?.Collectible?.MiningTier ?? -1) < MiningTier && (byPlayer?.WorldData?.CurrentGameMode ?? EnumGameMode.Survival) == EnumGameMode.Survival)
+            if ((byPlayer?.InventoryManager?.ActiveHotbarSlot?.Itemstack?.Collectible?.ToolTier ?? -1) < MiningTier && (byPlayer?.WorldData?.CurrentGameMode ?? EnumGameMode.Survival) == EnumGameMode.Survival)
             {
                 handling = EnumHandling.PreventSubsequent;
                 return;
