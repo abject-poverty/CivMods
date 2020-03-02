@@ -23,6 +23,7 @@ namespace CivMods
             api.RegisterItemClass("ItemBlueprint", typeof(ItemBlueprint));
             api.RegisterItemClass("ItemProspectingPick", typeof(ItemPropickExtension));
             api.RegisterBlockBehaviorClass("UnbreakableByTier", typeof(BlockBehaviorUnbreakableByTier));
+            api.RegisterEntityBehaviorClass("suffocation", typeof(EntityBehaviorSuffocate));
         }
 
         public bool TryAccessSnitch(BlockEntitySnitch snitch, IServerPlayer player)
@@ -140,6 +141,9 @@ namespace CivMods
                     }
                 }
             });
+
+            HudElementAirBar airBar = new HudElementAirBar(api);
+            airBar.TryOpen();
         }
 
         private void UseBlockEvent(IServerPlayer byPlayer, BlockSelection blockSel)

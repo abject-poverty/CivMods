@@ -103,6 +103,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Source\BlockBehaviors\BlockBehaviorUnbreakableByTier.cs" />
+    <Compile Include="Source\EntityBehaviors\EntityBehaviorSuffocate.cs" />
+    <Compile Include="Source\Gui\HudElementAirBar.cs" />
     <Compile Include="Source\Utility\Extensions.cs" />
     <Compile Include="Source\BlockEntities\BlockEntitySnitch.cs" />
     <Compile Include="Source\Blocks\BlockSnitch.cs" />

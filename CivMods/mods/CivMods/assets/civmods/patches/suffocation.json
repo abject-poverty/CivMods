@@ -1,0 +1,14 @@
+[
+    {
+        "op": "add",
+        "path": "/server/behaviors/0",
+        "value": { "code": "suffocation" },
+        "file": "game:entities/humanoid/player.json"
+    },
+    {
+        "op": "add",
+        "path": "/client/behaviors/0",
+        "value": { "code": "suffocation" },
+        "file": "game:entities/humanoid/player.json"
+    }
+]
