@@ -26,6 +26,16 @@ namespace CivMods
             api.RegisterEntityBehaviorClass("suffocation", typeof(EntityBehaviorSuffocate));
         }
 
+        public void RemovePlayerMapLayers()
+        {
+            var mapLayers = api.ModLoader.GetModSystem<WorldMapManager>().MapLayers;
+
+            foreach (var val in new List<MapLayer>(mapLayers.OfType<PlayerMapLayer>()))
+            {
+                mapLayers.Remove(val);
+            }
+        }
+
         public bool TryAccessSnitch(BlockEntitySnitch snitch, IServerPlayer player)
         {
             if (snitch == null || player == null) return false;
@@ -37,6 +47,8 @@ namespace CivMods
 
         public override void StartServerSide(ICoreServerAPI api)
         {
+            api.Event.SaveGameLoaded += () => RemovePlayerMapLayers();
+
             api.Event.DidPlaceBlock += PlaceBlockEvent;
             api.Event.DidBreakBlock += BreakBlockEvent;
             api.Event.DidUseBlock += UseBlockEvent;
@@ -123,6 +135,8 @@ namespace CivMods
 
         public override void StartClientSide(ICoreClientAPI api)
         {
+            api.Event.LevelFinalize += () => RemovePlayerMapLayers();
+
             api.RegisterCommand("snitchexport", "Export All Breakins To A File", "", (id, args) =>
             {
                 BlockPos pos = api.World.Player?.CurrentBlockSelection?.Position;

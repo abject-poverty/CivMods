@@ -97,7 +97,7 @@ namespace CivMods
             Vec3d blockCenter = pos.ToVec3d().AddCopy(0.5, 0.5, 0.5);
             Block block = sapi.World.BlockAccessor.GetBlock(pos);
             double distance = Math.Sqrt(vec.SquareDistanceTo(blockCenter));
-            if (block.IsLiquid() && distance < 1.5)
+            if (block.IsLiquid() && distance < 1.5 && int.Parse(block.LastCodePart()) > 4)
             {
                 suffocation = 0.01f;
                 return true;
@@ -107,7 +107,8 @@ namespace CivMods
             for (int i = 0; i < block.CollisionBoxes.Length; i++)
             {
                 suffocation = 0.5f;
-                if ((block.CollisionBoxes[i].Area() > 0.512) && distance < 1.11) return true;
+                var box = block.CollisionBoxes[i];
+                if (box.Height > 0.512 && box.Area() > 0.512 && distance < 1.11) return true;
             }
             return false;
         }
